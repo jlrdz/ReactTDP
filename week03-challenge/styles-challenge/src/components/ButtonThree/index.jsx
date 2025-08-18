@@ -1,0 +1,40 @@
+import styled from 'styled-components';
+
+const ButtonThree = styled.button`
+color: ${props => (props.active ? 'deeppink' : 'firebrick')};
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: inherit;
+  border: 0.2em solid;
+  box-shadow: 0 0.2em 0;
+  border-radius: 1em;
+  background-color: white;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.3)
+  );
+  padding: 0.2em 1em;
+  margin: 20px;
+
+  &:where(:hover, :active, .active) {
+    background-color: currentColor;
+    font-color: white;
+  }
+
+  &:where(:hover, :active, .active) span {
+    color: white;
+  }
+
+  &:where(:active, .active) {
+    box-shadow: 0 0 0;
+    transform: translateY(0.2em);
+  }
+
+  &:disabled {
+    color: silver;
+    pointer-events: none;
+  }
+`;
+
+export default ButtonThree;
