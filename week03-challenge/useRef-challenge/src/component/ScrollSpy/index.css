@@ -1,0 +1,11 @@
+.scroll-spy p {
+  margin-top: 50vh;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 0.4s;
+}
+
+.scroll-spy p.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
